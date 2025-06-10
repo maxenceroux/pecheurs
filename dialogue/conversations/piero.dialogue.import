@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://brvv6hagg1jfo"
+path="res://.godot/imported/piero.dialogue-3499902257918f2baf280f414da52c22.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/piero.dialogue"
+dest_files=["res://.godot/imported/piero.dialogue-3499902257918f2baf280f414da52c22.tres"]
+
+[params]
+
+defaults=true

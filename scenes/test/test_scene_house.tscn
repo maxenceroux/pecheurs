@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://b73u35b47gk0y"]
+[gd_scene load_steps=9 format=4 uid="uid://b73u35b47gk0y"]
 
 [ext_resource type="TileSet" uid="uid://pca6pqwpe1bq" path="res://TileSets/game_tile_set.tres" id="1_48fpx"]
 [ext_resource type="PackedScene" uid="uid://r2wr2qujbofc" path="res://scenes/characters/player/player.tscn" id="2_6qx8m"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://jdaphb8dvurn" path="res://scenes/characters/gaston/guide.tscn" id="4_mu3l2"]
 [ext_resource type="PackedScene" uid="uid://dxxwd4l1omr06" path="res://scenes/characters/coco/guide.tscn" id="5_2ch6h"]
 [ext_resource type="Script" uid="uid://41p6cm5oaisj" path="res://scenes/characters/coco/coco.gd" id="6_xd5qg"]
+[ext_resource type="PackedScene" uid="uid://bi7pjj8a6t7o1" path="res://scenes/characters/kpu/kpu.tscn" id="7_metso"]
+[ext_resource type="PackedScene" uid="uid://dvtfxhh40u53" path="res://scenes/characters/piero/piero.tscn" id="8_2cwqx"]
 
 [node name="TestSceneTileMap" type="Node2D"]
 
@@ -40,8 +42,17 @@ offset = Vector2(150, 0)
 
 [node name="Guide" parent="." instance=ExtResource("4_mu3l2")]
 position = Vector2(257, 68)
+scale = Vector2(0.03, 0.03)
 
 [node name="Guide2" parent="." instance=ExtResource("5_2ch6h")]
 position = Vector2(378, 72)
 scale = Vector2(0.03, 0.03)
 script = ExtResource("6_xd5qg")
+
+[node name="Guide3" parent="." instance=ExtResource("7_metso")]
+position = Vector2(231, 2)
+scale = Vector2(0.03, 0.03)
+
+[node name="Guide4" parent="." instance=ExtResource("8_2cwqx")]
+position = Vector2(413, -4)
+scale = Vector2(0.03, 0.03)

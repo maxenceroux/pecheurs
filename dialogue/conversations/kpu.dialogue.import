@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cful7gdmgty6i"
+path="res://.godot/imported/kpu.dialogue-736a2c8938aebd602e31d4e12f511636.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/kpu.dialogue"
+dest_files=["res://.godot/imported/kpu.dialogue-736a2c8938aebd602e31d4e12f511636.tres"]
+
+[params]
+
+defaults=true

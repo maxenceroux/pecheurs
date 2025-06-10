@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmfskig1dhs27"]
+[gd_scene load_steps=18 format=3 uid="uid://cmfskig1dhs27"]
 
 [ext_resource type="Theme" uid="uid://b0cimanhokkgx" path="res://scenes/ui/game_ui_themes.tres" id="1_nwcij"]
 [ext_resource type="Texture2D" uid="uid://cv65rj1tu561i" path="res://assets/game/characters/coco/face_coco_2.png" id="2_gafqs"]
 [ext_resource type="Script" uid="uid://bbushhank6p7q" path="res://scenes/ui/emote_panel.gd" id="2_m17ox"]
 [ext_resource type="Texture2D" uid="uid://ctv8vafkqrg1i" path="res://assets/ui/Idle Sprite Request Jun 7 2025.png" id="2_w8ev8"]
 [ext_resource type="Texture2D" uid="uid://c72gfyn3f45v5" path="res://assets/game/characters/coco/face_coco_1.png" id="3_m17ox"]
+[ext_resource type="Texture2D" uid="uid://j7cgqrqluc8y" path="res://assets/game/characters/kpu/kpu_face_2.png" id="6_lx3en"]
+[ext_resource type="Texture2D" uid="uid://dvjnbtjna10lh" path="res://assets/game/characters/kpu/kpu_face_1.png" id="7_8px4c"]
+[ext_resource type="Texture2D" uid="uid://c58y0b4ju1rhx" path="res://assets/game/characters/piero/piero_face_2.png" id="8_6ys4l"]
+[ext_resource type="Texture2D" uid="uid://bywls01bo8r5f" path="res://assets/game/characters/piero/piero_face_1.png" id="9_r3xfn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ghpu"]
 atlas = ExtResource("2_gafqs")
@@ -16,6 +20,22 @@ region = Rect2(0, 0, 40, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gafqs"]
 atlas = ExtResource("2_w8ev8")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ys4l"]
+atlas = ExtResource("6_lx3en")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3xfn"]
+atlas = ExtResource("7_8px4c")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixnon"]
+atlas = ExtResource("8_6ys4l")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8dst"]
+atlas = ExtResource("9_r3xfn")
 region = Rect2(0, 0, 40, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m17ox"]
@@ -38,6 +58,28 @@ animations = [{
 "loop": true,
 "name": &"gaston",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ys4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3xfn")
+}],
+"loop": true,
+"name": &"kpu",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixnon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8dst")
+}],
+"loop": true,
+"name": &"piero",
+"speed": 1.0
 }]
 
 [node name="EmotesPanel" type="Panel"]
@@ -67,5 +109,5 @@ grow_vertical = 2
 position = Vector2(19, 20)
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_m17ox")
-animation = &"coco"
+animation = &"piero"
 autoplay = "gaston"

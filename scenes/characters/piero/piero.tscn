@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvtfxhh40u53"]
+
+[ext_resource type="Script" uid="uid://bya6bsavo4iy8" path="res://scenes/characters/piero/piero.gd" id="1_enu5y"]
+[ext_resource type="Texture2D" uid="uid://doh6jn6rek5o2" path="res://assets/game/characters/piero/piero_standing_1.png" id="2_7c14b"]
+[ext_resource type="PackedScene" uid="uid://bnjlwssot81qp" path="res://scenes/components/InteractibleComponent.tscn" id="4_dhli5"]
+[ext_resource type="PackedScene" uid="uid://c4nsdjx2ip3dy" path="res://scenes/components/interactable_label_component.tscn" id="5_komx0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5qt2"]
+atlas = ExtResource("2_7c14b")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ufice"]
+load_path = "res://.godot/imported/piero_standing_2.png-1084aaf4d65a9a933d3089eb3f69a06e.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnx84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5qt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ufice")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvxhl"]
+radius = 21.0238
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_enu5y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -480)
+sprite_frames = SubResource("SpriteFrames_qnx84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="InteractableComponent" parent="." instance=ExtResource("4_dhli5")]
+scale = Vector2(40, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_yvxhl")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("5_komx0")]
+offset_left = -760.0
+offset_top = -1440.0
+offset_right = -742.0
+offset_bottom = -1422.0
+scale = Vector2(30, 30)

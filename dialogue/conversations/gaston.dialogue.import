@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://6v8ck5rcqvw2"
+path="res://.godot/imported/gaston.dialogue-a4085cf67545c00ceedc9bc5abaaf02d.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/gaston.dialogue"
+dest_files=["res://.godot/imported/gaston.dialogue-a4085cf67545c00ceedc9bc5abaaf02d.tres"]
+
+[params]
+
+defaults=true

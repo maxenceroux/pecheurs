@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://cmfskig1dhs27"]
+
+[ext_resource type="Theme" uid="uid://b0cimanhokkgx" path="res://scenes/ui/game_ui_themes.tres" id="1_nwcij"]
+[ext_resource type="Texture2D" uid="uid://cv65rj1tu561i" path="res://assets/game/characters/coco/face_coco_2.png" id="2_gafqs"]
+[ext_resource type="Script" uid="uid://bbushhank6p7q" path="res://scenes/ui/emote_panel.gd" id="2_m17ox"]
+[ext_resource type="Texture2D" uid="uid://ctv8vafkqrg1i" path="res://assets/ui/Idle Sprite Request Jun 7 2025.png" id="2_w8ev8"]
+[ext_resource type="Texture2D" uid="uid://c72gfyn3f45v5" path="res://assets/game/characters/coco/face_coco_1.png" id="3_m17ox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ghpu"]
+atlas = ExtResource("2_gafqs")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx3en"]
+atlas = ExtResource("3_m17ox")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gafqs"]
+atlas = ExtResource("2_w8ev8")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m17ox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ghpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx3en")
+}],
+"loop": true,
+"name": &"coco",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gafqs")
+}],
+"loop": true,
+"name": &"gaston",
+"speed": 5.0
+}]
+
+[node name="EmotesPanel" type="Panel"]
+custom_minimum_size = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_nwcij")
+theme_type_variation = &"DarkWoodPanel"
+script = ExtResource("2_m17ox")
+
+[node name="Emote" type="Control" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Emote"]
+position = Vector2(19, 20)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_m17ox")
+animation = &"coco"
+autoplay = "gaston"

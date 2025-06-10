@@ -1,0 +1,15 @@
+~ start
+Coco: Je sais pas qui je préfère entre toi et les pâtes...
+Coco: Tu m'en veux pas ?
+- Mais non t'inquiète Coco t'es la best!
+	Coco: Super!
+- Tout dépend du type de pâtes
+	Coco: Tu penses à quel type de pâtes ?
+	- Panzani
+		Coco: Chouette
+	- Barilla
+		Coco: Berk
+	- De Cecco
+		Coco: Youpi
+	  
+=> END

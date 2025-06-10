@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bqybd3uyqm5ay"
+path="res://.godot/imported/coco.dialogue-80681a248e13d35d624d45ffbf9f84f5.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/coco.dialogue"
+dest_files=["res://.godot/imported/coco.dialogue-80681a248e13d35d624d45ffbf9f84f5.tres"]
+
+[params]
+
+defaults=true

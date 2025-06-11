@@ -75,7 +75,7 @@ show_dialogue={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://guide.dialogue", "res://dialogue/conversations/coco.dialogue", "res://dialogue/conversations/gaston.dialogue", "res://dialogue/conversations/kpu.dialogue", "res://dialogue/conversations/piero.dialogue")
+locale/translations_pot_files=PackedStringArray("res://guide.dialogue", "res://dialogue/conversations/coco.dialogue", "res://dialogue/conversations/gaston.dialogue", "res://dialogue/conversations/kpu.dialogue", "res://dialogue/conversations/piero.dialogue", "res://dialogue/conversations/hugo.dialogue")
 
 [layer_names]
 

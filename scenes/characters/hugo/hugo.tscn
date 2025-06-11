@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://crmxknb500v0o"]
+
+[ext_resource type="Script" uid="uid://2nrmvuux5l8h" path="res://scenes/characters/hugo/hugo.gd" id="1_m5h1y"]
+[ext_resource type="Texture2D" uid="uid://8mblgdf6nckt" path="res://assets/game/characters/hugo/hugo_standing_1.png" id="2_m5h1y"]
+[ext_resource type="Texture2D" uid="uid://bj5gi6ghhgmmy" path="res://assets/game/characters/hugo/hugo_standing_2.png" id="3_fkhlk"]
+[ext_resource type="PackedScene" uid="uid://bnjlwssot81qp" path="res://scenes/components/InteractibleComponent.tscn" id="4_fee3c"]
+[ext_resource type="PackedScene" uid="uid://c4nsdjx2ip3dy" path="res://scenes/components/interactable_label_component.tscn" id="5_the0r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcqp7"]
+atlas = ExtResource("2_m5h1y")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwrlb"]
+atlas = ExtResource("3_fkhlk")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnx84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcqp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwrlb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvxhl"]
+radius = 21.0238
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_m5h1y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -480)
+sprite_frames = SubResource("SpriteFrames_qnx84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="InteractableComponent" parent="." instance=ExtResource("4_fee3c")]
+scale = Vector2(40, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_yvxhl")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("5_the0r")]
+offset_left = -760.0
+offset_top = -1440.0
+offset_right = -742.0
+offset_bottom = -1422.0
+scale = Vector2(30, 30)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmfskig1dhs27"]
+[gd_scene load_steps=34 format=3 uid="uid://cmfskig1dhs27"]
 
 [ext_resource type="Theme" uid="uid://b0cimanhokkgx" path="res://scenes/ui/game_ui_themes.tres" id="1_nwcij"]
 [ext_resource type="Texture2D" uid="uid://cv65rj1tu561i" path="res://assets/game/characters/coco/face_coco_2.png" id="2_gafqs"]
@@ -10,7 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://dvjnbtjna10lh" path="res://assets/game/characters/kpu/kpu_face_1.png" id="7_8px4c"]
 [ext_resource type="Texture2D" uid="uid://bmbijf0kkd8bm" path="res://assets/game/characters/hugo/hugo_face_2.png" id="7_s8dst"]
 [ext_resource type="Texture2D" uid="uid://c58y0b4ju1rhx" path="res://assets/game/characters/piero/piero_face_2.png" id="8_6ys4l"]
+[ext_resource type="Texture2D" uid="uid://dab6tjm62bnbw" path="res://assets/game/characters/jose/jose_face_1.png" id="8_mkdta"]
+[ext_resource type="Texture2D" uid="uid://v32geppph8mn" path="res://assets/game/characters/jose/jose_face_2.png" id="9_lrc2t"]
 [ext_resource type="Texture2D" uid="uid://bywls01bo8r5f" path="res://assets/game/characters/piero/piero_face_1.png" id="9_r3xfn"]
+[ext_resource type="Texture2D" uid="uid://b8d3crbxtnsr0" path="res://assets/game/characters/lulu/lulu_face_1.png" id="10_5vsnv"]
+[ext_resource type="Texture2D" uid="uid://b8gi6hoxc6vys" path="res://assets/game/characters/lulu/lulu_face_2.png" id="11_6afrh"]
+[ext_resource type="Texture2D" uid="uid://b7bohfeaqots0" path="res://assets/game/characters/lea/lea_face_1.png" id="12_eh4dr"]
+[ext_resource type="Texture2D" uid="uid://5gbavwaovlb2" path="res://assets/game/characters/lea/lea_face_2.png" id="13_yuhc8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ghpu"]
 atlas = ExtResource("2_gafqs")
@@ -32,12 +38,36 @@ region = Rect2(0, 0, 40, 40)
 atlas = ExtResource("7_s8dst")
 region = Rect2(0, 0, 40, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh4dr"]
+atlas = ExtResource("8_mkdta")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuhc8"]
+atlas = ExtResource("9_lrc2t")
+region = Rect2(0, 0, 40, 40)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ys4l"]
 atlas = ExtResource("6_lx3en")
 region = Rect2(0, 0, 40, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r3xfn"]
 atlas = ExtResource("7_8px4c")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nim5l"]
+atlas = ExtResource("12_eh4dr")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jxpl"]
+atlas = ExtResource("13_yuhc8")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkdta"]
+atlas = ExtResource("10_5vsnv")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrc2t"]
+atlas = ExtResource("11_6afrh")
 region = Rect2(0, 0, 40, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixnon"]
@@ -78,7 +108,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"hugo",
-"speed": 5.0
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh4dr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuhc8")
+}],
+"loop": true,
+"name": &"jose",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -89,6 +130,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"kpu",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nim5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jxpl")
+}],
+"loop": true,
+"name": &"lea",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkdta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrc2t")
+}],
+"loop": true,
+"name": &"lulu",
 "speed": 1.0
 }, {
 "frames": [{
@@ -130,5 +193,5 @@ grow_vertical = 2
 position = Vector2(19, 20)
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_m17ox")
-animation = &"hugo"
+animation = &"lea"
 autoplay = "gaston"

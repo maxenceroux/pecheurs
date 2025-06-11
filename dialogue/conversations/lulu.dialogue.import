@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://g38uvv5spenm"
+path="res://.godot/imported/lulu.dialogue-160d16bc28883655c860f4983e81405c.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/lulu.dialogue"
+dest_files=["res://.godot/imported/lulu.dialogue-160d16bc28883655c860f4983e81405c.tres"]
+
+[params]
+
+defaults=true

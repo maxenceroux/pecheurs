@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ds5rhvvxrpqu2"
+path="res://.godot/imported/lea.dialogue-eb0f3d4f1b3b1357186c8cd008407d4e.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/lea.dialogue"
+dest_files=["res://.godot/imported/lea.dialogue-eb0f3d4f1b3b1357186c8cd008407d4e.tres"]
+
+[params]
+
+defaults=true

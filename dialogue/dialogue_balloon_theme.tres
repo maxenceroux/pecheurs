@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=3 uid="uid://cnmiet863k1op"]
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://cnmiet863k1op"]
 
 [ext_resource type="Texture2D" uid="uid://dt361pry1mm3n" path="res://assets/ui/basic_ui_sprites.png" id="1_tge16"]
 
@@ -22,11 +22,22 @@ region = Rect2(59, 107, 26, 26)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rm2g8"]
 texture = SubResource("AtlasTexture_da7dv")
-region_rect = Rect2(4, 4, 18, 18)
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 26, 26)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_preor"]
-texture = SubResource("AtlasTexture_xukoe")
-region_rect = Rect2(4, 4, 18, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tge16"]
+atlas = ExtResource("1_tge16")
+region = Rect2(275, 178, 90, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xukoe"]
+texture = SubResource("AtlasTexture_tge16")
+texture_margin_left = 4.0
+texture_margin_top = 3.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 86, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptclq"]
 atlas = ExtResource("1_tge16")
@@ -49,7 +60,11 @@ region = Rect2(107, 155, 26, 26)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dy07"]
 texture = SubResource("AtlasTexture_61pev")
-region_rect = Rect2(4, 4, 18, 18)
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 26, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7y81l"]
 atlas = ExtResource("1_tge16")
@@ -66,7 +81,7 @@ region_rect = Rect2(0, 0, 90, 25)
 [resource]
 Button/styles/disabled = SubResource("StyleBoxTexture_mlgyr")
 Button/styles/focus = SubResource("StyleBoxTexture_rm2g8")
-Button/styles/hover = SubResource("StyleBoxTexture_preor")
+Button/styles/hover = SubResource("StyleBoxTexture_xukoe")
 Button/styles/normal = SubResource("StyleBoxTexture_oammv")
 Button/styles/pressed = SubResource("StyleBoxTexture_7dy07")
 CharacterNameText/base_type = &"RichTextLabel"

@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1749645168|1967489090';
+const CACHE_VERSION = '1749650243|7042389136';
 /** @type {string} */
 const CACHE_PREFIX = 'pacs_peche-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;

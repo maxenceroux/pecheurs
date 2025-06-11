@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt0sh2qxpx72p"]
+
+[ext_resource type="Texture2D" uid="uid://c46kgwp656mlj" path="res://assets/game/controls/e.png" id="1_c1tq5"]
+[ext_resource type="Texture2D" uid="uid://b47ipbu86leas" path="res://assets/game/controls/left.png" id="1_notdv"]
+[ext_resource type="Texture2D" uid="uid://nwr4ihulc3y2" path="res://assets/game/controls/right.png" id="2_c1tq5"]
+[ext_resource type="Texture2D" uid="uid://dhi5xfujnd1l0" path="res://assets/game/controls/up.png" id="3_pefoi"]
+[ext_resource type="Texture2D" uid="uid://flbmhe2lbdt0" path="res://assets/game/controls/down.png" id="4_mc04f"]
+
+[node name="TouchControls" type="CanvasLayer"]
+
+[node name="E" type="TouchScreenButton" parent="."]
+position = Vector2(471, 240)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_c1tq5")
+action = "show_dialogue"
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(31, 242)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_notdv")
+action = "walk_left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2(131, 241)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_c1tq5")
+action = "walk_right"
+
+[node name="Up" type="TouchScreenButton" parent="."]
+position = Vector2(82, 193)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_pefoi")
+action = "walk_up"
+
+[node name="Down" type="TouchScreenButton" parent="."]
+position = Vector2(87, 291)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_mc04f")
+action = "walk_down"

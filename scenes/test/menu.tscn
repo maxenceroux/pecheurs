@@ -62,14 +62,15 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme = ExtResource("1_x1ky2")
 theme_type_variation = &"DarkWoodPanel"
-text = "Laura
-"
+text = "Louis"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("1_x1ky2")
 theme_type_variation = &"DarkWoodPanel"
-text = "Ludo"
+text = "Laura
+"
 
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_ludo_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_laura_pressed"]

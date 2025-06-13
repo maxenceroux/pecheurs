@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b2aj7ta1t06uh"]
+[gd_scene load_steps=16 format=4 uid="uid://ssg507v2sno6"]
 
 [ext_resource type="TileSet" uid="uid://pca6pqwpe1bq" path="res://TileSets/game_tile_set.tres" id="1_48fpx"]
 [ext_resource type="PackedScene" uid="uid://r2wr2qujbofc" path="res://scenes/characters/player/player.tscn" id="2_6qx8m"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://b8wu74b3c6wft" path="res://scenes/characters/lulu/lulu.tscn" id="10_vpkyr"]
 [ext_resource type="PackedScene" uid="uid://6ho0gaekvohi" path="res://scenes/characters/lea/lea.tscn" id="12_8kr82"]
 [ext_resource type="PackedScene" uid="uid://dt0sh2qxpx72p" path="res://scenes/touch_controls.tscn" id="13_3mm05"]
+[ext_resource type="PackedScene" uid="uid://bk6jhd6eh6qlx" path="res://scenes/characters/louise/louise.tscn" id="14_n72cy"]
+[ext_resource type="PackedScene" uid="uid://dsbyahmq1uopq" path="res://scenes/characters/francis/francis.tscn" id="15_fxjl7"]
 
 [node name="TestSceneTileMap" type="Node2D"]
 
@@ -40,11 +42,6 @@ tile_set = ExtResource("2_8ykp8")
 
 [node name="Player" parent="GameTileMap" instance=ExtResource("2_6qx8m")]
 position = Vector2(15.0001, 164)
-scale = Vector2(0.7, 0.7)
-current_tool = 0
-
-[node name="Camera2D" type="Camera2D" parent="GameTileMap/Player"]
-offset = Vector2(150, 0)
 
 [node name="Guide" parent="." instance=ExtResource("4_mu3l2")]
 position = Vector2(257, 68)
@@ -81,8 +78,18 @@ scale = Vector2(0.03, 0.03)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TouchControls" parent="Control" instance=ExtResource("13_3mm05")]
+
+[node name="Guide9" parent="." instance=ExtResource("14_n72cy")]
+position = Vector2(394, 259)
+scale = Vector2(0.03, 0.03)
+
+[node name="Guide10" parent="." instance=ExtResource("15_fxjl7")]
+position = Vector2(485, 107)
+scale = Vector2(0.03, 0.03)

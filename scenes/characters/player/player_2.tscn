@@ -1,0 +1,253 @@
+[gd_scene load_steps=37 format=3 uid="uid://by2yq3tde5ou6"]
+
+[ext_resource type="Script" uid="uid://bjblwcqhuenxi" path="res://scenes/characters/player/player.gd" id="1_d3jrm"]
+[ext_resource type="Texture2D" uid="uid://cncupiypkrkjm" path="res://assets/game/characters/laura/back_1.png" id="2_stvek"]
+[ext_resource type="Texture2D" uid="uid://bpkoc6obr4cy" path="res://assets/game/characters/laura/idle_back_1.png" id="2_ukox7"]
+[ext_resource type="Texture2D" uid="uid://cwqqyry7fnyed" path="res://assets/game/characters/laura/idle_1.png" id="3_la06v"]
+[ext_resource type="Texture2D" uid="uid://bnmllrksy03of" path="res://assets/game/characters/laura/idle_back_2.png" id="3_tbe6a"]
+[ext_resource type="Texture2D" uid="uid://bjeywtt5iwcc7" path="res://assets/game/characters/laura/idle_2.png" id="4_3alvb"]
+[ext_resource type="Texture2D" uid="uid://c0xqj65icfs07" path="res://assets/game/characters/laura/idle_3.png" id="5_7t8j2"]
+[ext_resource type="Texture2D" uid="uid://3eb1pbp7avij" path="res://assets/game/characters/laura/idle_4.png" id="6_a5gax"]
+[ext_resource type="Texture2D" uid="uid://bx1rlyx6oqebc" path="res://assets/game/characters/basic_character_ctions.png" id="7_a5gax"]
+[ext_resource type="Texture2D" uid="uid://bc6ir8wrkv45a" path="res://assets/game/characters/laura/left_1.png" id="7_sexeu"]
+[ext_resource type="Texture2D" uid="uid://cuw2n0t3jrdwy" path="res://assets/game/characters/laura/left_2.png" id="8_stvek"]
+[ext_resource type="Texture2D" uid="uid://sj5c0cyabqny" path="res://assets/game/characters/laura/left_3.png" id="9_20uvj"]
+[ext_resource type="Texture2D" uid="uid://dgwmsxw4wkrcf" path="res://assets/game/characters/laura/back_2.png" id="10_20uvj"]
+[ext_resource type="Script" uid="uid://dnbw6sbypl6j" path="res://scripts/state_machine/node_state_machine.gd" id="10_cg3gb"]
+[ext_resource type="Texture2D" uid="uid://d7l7egxdby1l" path="res://assets/game/characters/laura/left_4.png" id="10_ukox7"]
+[ext_resource type="Texture2D" uid="uid://chjhyv5od4i1p" path="res://assets/game/characters/laura/front_1.png" id="11_la06v"]
+[ext_resource type="Script" uid="uid://ch2is5wa2m2jg" path="res://scenes/characters/player/idle_state.gd" id="11_sexeu"]
+[ext_resource type="Texture2D" uid="uid://cbhtoppw2fymf" path="res://assets/game/characters/laura/back_3.png" id="11_ukox7"]
+[ext_resource type="Texture2D" uid="uid://cr8rxbplbeurb" path="res://assets/game/characters/laura/front_2.png" id="12_3alvb"]
+[ext_resource type="Script" uid="uid://bfdh4lhssfjqb" path="res://scenes/characters/player/walk_state.gd" id="12_stvek"]
+[ext_resource type="Texture2D" uid="uid://cleynwdkl00vj" path="res://assets/game/characters/laura/back_4.png" id="12_tbe6a"]
+[ext_resource type="Script" uid="uid://bk2t8o6dn7ccx" path="res://scenes/characters/player/tilling.gd" id="13_20uvj"]
+[ext_resource type="Texture2D" uid="uid://cbnm6mblwm0dt" path="res://assets/game/characters/laura/right_1.png" id="13_d62g3"]
+[ext_resource type="Texture2D" uid="uid://dr7pijpwe6jml" path="res://assets/game/characters/laura/right_2.png" id="14_qhd0f"]
+[ext_resource type="Texture2D" uid="uid://c7f3sgyslnni5" path="res://assets/game/characters/laura/right_3.png" id="15_cg3gb"]
+[ext_resource type="Texture2D" uid="uid://b8fv3c8hfebn4" path="res://assets/game/characters/laura/right_4.png" id="16_sexeu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsn6e"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blysn"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv5x3"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykrpk"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1nod"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kqyw"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svuau"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro20i"]
+atlas = ExtResource("7_a5gax")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8rto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ukox7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tbe6a")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_la06v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3alvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7t8j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a5gax")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_20uvj")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_qhd0f")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsn6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blysn")
+}],
+"loop": false,
+"name": &"tilling_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv5x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykrpk")
+}],
+"loop": false,
+"name": &"tilling_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1nod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kqyw")
+}],
+"loop": false,
+"name": &"tilling_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svuau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro20i")
+}],
+"loop": false,
+"name": &"tilling_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_stvek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_20uvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ukox7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tbe6a")
+}],
+"loop": true,
+"name": &"walk_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_la06v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3alvb")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_sexeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_stvek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_20uvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ukox7")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_d62g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qhd0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cg3gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sexeu")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blysn"]
+size = Vector2(21, 25)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 2
+script = ExtResource("1_d3jrm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-21.6667, -561.667)
+sprite_frames = SubResource("SpriteFrames_j8rto")
+animation = &"walk_right"
+autoplay = "idle_front"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_blysn")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("10_cg3gb")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("11_sexeu")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("12_stvek")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+speed = 70
+
+[node name="Till" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animating_sprite_2d")]
+script = ExtResource("13_20uvj")
+player = NodePath("../..")
+animating_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]

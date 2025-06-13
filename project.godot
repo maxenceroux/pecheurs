@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="pacs_peche"
-run/main_scene="uid://b2aj7ta1t06uh"
+run/main_scene="uid://b7w0rjivja4f7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

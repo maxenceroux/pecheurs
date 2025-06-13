@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://y3cxgrg1e3qg"
+path="res://.godot/imported/louise.dialogue-c4ac60deeec55534f98bc46f985cbf91.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/louise.dialogue"
+dest_files=["res://.godot/imported/louise.dialogue-c4ac60deeec55534f98bc46f985cbf91.tres"]
+
+[params]
+
+defaults=true

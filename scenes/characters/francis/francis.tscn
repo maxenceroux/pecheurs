@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://dsbyahmq1uopq"]
+
+[ext_resource type="Script" uid="uid://g7ys74gts7xv" path="res://scenes/characters/francis/francis.gd" id="1_hxhnl"]
+[ext_resource type="Texture2D" uid="uid://dp76v8x7iircc" path="res://assets/game/characters/francis/francis_standing_1.png" id="2_hxhnl"]
+[ext_resource type="Texture2D" uid="uid://5wi6g3wquct5" path="res://assets/game/characters/francis/francis_standing_2.png" id="3_a8rrw"]
+[ext_resource type="PackedScene" uid="uid://bnjlwssot81qp" path="res://scenes/components/InteractibleComponent.tscn" id="4_syyu2"]
+[ext_resource type="PackedScene" uid="uid://c4nsdjx2ip3dy" path="res://scenes/components/interactable_label_component.tscn" id="5_5ciw3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktrmk"]
+atlas = ExtResource("2_hxhnl")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2fqy"]
+atlas = ExtResource("3_a8rrw")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnx84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktrmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2fqy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvxhl"]
+radius = 21.0238
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_hxhnl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -480)
+sprite_frames = SubResource("SpriteFrames_qnx84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="InteractableComponent" parent="." instance=ExtResource("4_syyu2")]
+scale = Vector2(40, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_yvxhl")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("5_5ciw3")]
+offset_left = -760.0
+offset_top = -1440.0
+offset_right = -742.0
+offset_bottom = -1422.0
+scale = Vector2(30, 30)

@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://bk6jhd6eh6qlx"]
+
+[ext_resource type="Script" uid="uid://cvartb321eb6" path="res://scenes/characters/louise/louise.gd" id="1_l6kt7"]
+[ext_resource type="Texture2D" uid="uid://dwtjhcxlwlqr7" path="res://assets/game/characters/louise/louise_standing_1.png" id="2_l6kt7"]
+[ext_resource type="Texture2D" uid="uid://2glycm181ogv" path="res://assets/game/characters/louise/louise_standing_2.png" id="3_v3iiw"]
+[ext_resource type="PackedScene" uid="uid://bnjlwssot81qp" path="res://scenes/components/InteractibleComponent.tscn" id="4_55qyr"]
+[ext_resource type="PackedScene" uid="uid://c4nsdjx2ip3dy" path="res://scenes/components/interactable_label_component.tscn" id="5_racqo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xljo1"]
+atlas = ExtResource("2_l6kt7")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj8y0"]
+atlas = ExtResource("3_v3iiw")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnx84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xljo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj8y0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvxhl"]
+radius = 21.0238
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_l6kt7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -480)
+sprite_frames = SubResource("SpriteFrames_qnx84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="InteractableComponent" parent="." instance=ExtResource("4_55qyr")]
+scale = Vector2(40, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_yvxhl")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("5_racqo")]
+offset_left = -760.0
+offset_top = -1440.0
+offset_right = -742.0
+offset_bottom = -1422.0
+scale = Vector2(30, 30)
